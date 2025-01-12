@@ -1,0 +1,359 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.navbar_toggle {
+    display: none; 
+    cursor: pointer;
+}
+.hamburger-icon {
+    width: 30px; 
+    height: auto; 
+}
+
+header {
+    position: relative;
+    text-align: center;
+    color: #000000;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.45);
+    z-index: 1;
+}
+
+.header-background {
+    width: 100%;
+    height: 400px;
+    filter: brightness(70%);
+}
+
+nav {
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+h1, p {
+    text-align: center;
+}
+h3{
+    margin-top:0.7em;
+    font-size:23px;
+    font-weight: 550; /* Semibold */
+}
+h1 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600; /* Semibold */
+    font-size: 30px;
+}
+p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500; /* Medium */
+    font-style: italic;
+    font-size: 20px;
+}
+
+
+.navbar_logo img {
+    width: 170px;
+    height: auto;
+}
+
+.navbar_list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding-top: 5em;
+    gap: 60px;
+}
+
+.navbar_list a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.navbar_logo {
+    width: 30px;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.books-container {
+    display: flex;
+    justify-content: center;
+    max-width: 1500px;
+    gap: 5em;
+    flex-wrap: wrap;
+    margin-top: 5em;
+    margin-left: 4em;
+    margin-bottom: 8em;
+}
+
+.book-description {
+    background-color: #D0D0FE;
+    padding: 2em;
+}
+
+.book {
+    display: flex;
+    width: 530px;
+    height:auto;
+}
+
+.book img {
+    width: 250px;
+    height: auto;
+}
+
+.book-description audio {
+    margin-top: 5em;
+}
+
+footer {
+    margin-top: 4em;
+    background-color: #B9B6E5;
+    height: 7em;
+}
+
+footer p {
+    text-align: center;
+    padding-top: 1em;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 8em;
+    padding-top: 1em;
+}
+
+/* Responsive Styles */
+
+/* Phones - Portrait */
+@media only screen and (max-width: 480px) and (orientation: portrait) {
+    
+    .navbar_list {
+        display: none;
+    }
+    .navbar_logo img {
+        width: 150px;
+        height: auto;
+    }
+    .book-nav {
+        display: flex;
+       flex-direction:row;
+        gap: 10em;
+    }
+    .navbar_toggle {
+        display: flex;
+    }
+    .hamburger-icon {
+        width: 100px; 
+        height: auto; 
+    }
+    .header-background {
+        width:100%;
+        height: 300px;
+
+    }
+    header {
+        width: 100%; 
+        padding: 0; 
+    }
+    .books-container{
+        
+        flex-direction: column;
+        justify-content:center;
+        align-items:center;
+        width:100%;
+        margin-left:0;
+
+    }
+    .book {
+        display: flex;
+        width: 400px;
+    }
+    
+    .book img {
+        width: 230px;
+    }
+    
+    footer {
+        width: 100%; 
+        padding: 0; 
+    }
+    .social-icons {
+        gap: 1em;
+    }
+}
+
+/* Phones - Landscape */
+@media only screen and (max-width: 480px) and (orientation: landscape) {
+    
+    
+}
+
+/* Tablets - Portrait */
+@media (min-width: 481px) and (max-width: 768px) and (orientation: portrait) {
+    .navbar_list {
+        display: none;
+    }
+    .navbar_logo img {
+        width: 150px;
+        height: auto;
+    }
+    .book-nav {
+        display: flex;
+       flex-direction:row;
+       margin-top: 2em;
+        gap: 35em;
+    }
+    .navbar_toggle {
+        display: flex;
+    }
+    .hamburger-icon {
+        width: 100px; /* Adjust size as needed */
+        height: auto; /* Maintain aspect ratio */
+    }
+    .books-container {
+        display: flex; 
+        
+    }
+    
+    .book {
+        display:flex;
+        flex-direction:row;
+        flex: 1 1 200px; 
+        width: 400px;
+    }
+    .book-description{
+        width:400px;
+    }
+    
+    .book:nth-child(4) {
+        order: 2; 
+
+    }
+    .book:nth-child(4) .book-description {
+        order:1;
+    }
+    .book:nth-child(4) img{
+        order:2;
+    }
+    
+    .book:nth-child(1) {
+        order: 1; /* Keep the first book (Tell Me Your Dreams) in first position */
+    }
+    
+    .book:nth-child(2) {
+        order: 3; /* Move the second book (In Some Other Life) to third position */
+    }
+    
+    .book:nth-child(3) {
+        order: 4; /* Move the third book (It Ends With Us) to fourth position */
+    }
+    .book:nth-child(3) .book-description {
+        order:1;
+    }
+    .book:nth-child(3) img{
+        order:2;
+    }
+    
+}
+
+/* Tablets - Landscape */
+@media (min-width: 769px) and (max-width: 1024px) and (orientation: landscape) {
+    .navbar_list {
+        display: none;
+    }
+    .navbar_logo img {
+        width: 150px;
+        height: auto;
+    }
+    .book-nav {
+        display: flex;
+       flex-direction:row;
+       align-items:center;
+       justify-content:center;
+       margin-top: 2em;
+       gap:40em;
+        
+    }
+    .navbar_toggle {
+        display: flex;
+    }
+    .hamburger-icon {
+        width: 100px; /* Adjust size as needed */
+        height: auto; /* Maintain aspect ratio */
+    }
+    .books-container {
+        display: flex; /* Enable Flexbox */
+        flex-direction:column;
+        
+    }
+    
+    .book {
+        display:flex;
+        flex-direction:row;
+        flex: 1 1 200px; /* Allow books to grow and shrink, with a base width */
+        
+    }
+    .book-description{
+        width:400px;
+    }
+    
+    .book:nth-child(4) {
+        order: 2;
+        margin-left:17em; 
+
+    }
+    .book:nth-child(4) .book-description {
+        order:1;
+    }
+    .book:nth-child(4) img{
+        order:2;
+    }
+    
+    .book:nth-child(1) {
+        order: 1; /* Keep the first book (Tell Me Your Dreams) in first position */
+    }
+    
+    .book:nth-child(2) {
+        order: 3; /* Move the second book (In Some Other Life) to third position */
+    }
+    
+    .book:nth-child(3) {
+        order: 4; /* Move the third book (It Ends With Us) to fourth position */
+        margin-left:22em; 
+    }
+    .book:nth-child(3) .book-description {
+        order:1;
+    }
+    .book:nth-child(3) img{
+        order:2;
+    }
+    
+}
+

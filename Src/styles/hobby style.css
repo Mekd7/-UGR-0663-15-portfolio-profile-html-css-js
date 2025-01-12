@@ -1,0 +1,380 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.navbar_toggle {
+    display: none; /* Hide by default */
+    cursor: pointer;
+}
+.hamburger-icon {
+    width: 30px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+nav { 
+    background-color: #B9B6E5; 
+    height: 7em;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 0 20px; /* Add some horizontal padding */
+}
+
+.navbar_list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    flex-grow: 1; 
+}
+
+.navbar_logo{
+    margin-left: 2em;
+}
+
+.navbar_list li {
+    margin: 0 25px; 
+    list-style: none;
+}
+
+.navbar_list li a {
+    text-decoration: none; 
+    font-size: 20px; 
+    color: black;
+    font-weight: bold; 
+    font-size: 20px;
+}
+h1{
+    margin-top: 3em;
+    margin-bottom: 2.5em;
+    text-align: center;
+}
+.content p{
+    font-family: Adamina, serif;
+    font-size:20px;
+    text-align:left;
+}
+.hobbies-container{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+
+}
+.hobbies-container::before {
+    content: "";
+    position: absolute; /* Position it absolutely */
+    width: 5px; /* Width of the line */
+    height: 100%; /* Full height of the container */
+    background-color: #B9B6E5; /* Line color */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust to truly center the line */
+}
+.dot {
+    height: 21px;
+    width: 21px;
+    background-color: #B9B6E5;
+    box-shadow: 0 0 25px #B9B6E5, 0 0 25px #B9B6E5;
+    position: absolute;
+    left: calc(50% - 10.5px); /* Center the dot */
+    top: calc(50% - 10.5px); /* Center the dot vertically */
+    border-radius: 50%;
+}
+.content:nth-child(odd) .dot {
+    margin-left: 22em;
+}
+
+.content:nth-child(even) .dot {
+    margin-left: -22em;
+}
+
+.content{
+    margin-bottom: 100px;
+    width: 500px;
+    position: relative;
+    background-color: #B9B6E5;
+    border: 2pz solid #9088fc;
+    padding: 30px 50px;
+    border-radius: 4rem;
+    box-shadow: 0 0  10px #B9B6E5;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+  
+}
+.content img{
+    width: 400px ;
+    height: 424px;
+    border-radius: 4rem;
+}
+.content video{
+    width:400px; 
+    height: 600px;
+    border-radius: 4rem;
+}
+.content:last-child{
+    margin-bottom: 0;
+}
+.content:nth-child(even) {
+     
+    margin-left: 700px; /* Push the entire section to the right */
+    width: calc(50% - 30px); /* Adjust width to fit in the available space */
+    text-align: right; /* Align text to the right */
+}
+.content:nth-child(odd){
+    padding-left:calc(50%+30px);
+    
+}
+
+
+
+footer {
+    margin-top: 4em;
+    background-color: #B9B6E5;
+    height: 7em;
+}
+
+footer p {
+    text-align: center;
+    padding-top: 1em;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 8em;
+    padding-top: 1em;
+}
+/* Responsive Styles */
+/* Styles for Phones (Portrait) */
+@media (max-width: 480px) and (orientation: portrait) {
+    nav {
+        display: flex;
+        justify-content: center;
+        gap: 12em;
+        width: 500px;
+        height: auto;
+    }
+
+    .navbar_logo img {
+        width: 150px;
+        height: auto;
+    }
+
+    .navbar_toggle {
+        display: flex;
+    }
+
+    .hamburger-icon {
+        width: 100px; /* Adjust size as needed */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .navbar_list {
+        display: none; /* Hide navbar list */
+    }
+
+    .hobbies-container::before {
+        display: none;
+    }
+
+    .dot {
+        display: none; /* Hide dots */
+    }
+
+    .hobbies-container {
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        flex-direction: column; 
+        gap: 5em;
+        width: 100%;
+        margin-left: 2em;
+    }
+
+    .content {
+        width: 400px;
+        height: auto;
+    }
+
+    .content img{
+        width:300px;
+        padding-bottom:2em;
+    }
+    .content video{
+        width: 300px;
+        
+        padding-bottom:2em;
+    }
+    
+
+    .content:nth-child(even) {
+        margin-left: 0; /* Remove left margin */
+        width: 400px;
+    }
+
+    footer {
+        width: 500px;
+    }
+}
+
+/* Phone Landscape */
+@media (max-width: 480px) and (orientation: landscape) { 
+    nav {
+        display: flex;
+        justify-content: center;
+        gap: 5em;
+        width: 100%;
+        height: auto;
+    }
+
+    .navbar_logo img {
+        width: 150px;
+        height: auto;
+    }
+    .navbar_toggle{
+        display: flex;
+    }
+    .hamburger-icon {
+        width: 100px; /* Adjust size as needed */
+        height: auto; /* Maintain aspect ratio */
+    }
+    .navbar_list {
+        display: none;
+    }   
+   
+    
+}
+
+/* Tablet Portrait */
+@media (min-width: 481px) and (max-width: 768px) and (orientation: portrait) {
+    nav {
+        display: flex;
+        justify-content: center;
+        gap: 25em;
+        width: 100%;
+        height: auto;
+    }
+
+    .navbar_logo img {
+        width: 150px;
+        height: auto;
+    }
+    .navbar_toggle{
+        display: flex;
+    }
+    .hamburger-icon {
+        width: 100px; /* Adjust size as needed */
+        height: auto; /* Maintain aspect ratio */
+    }
+    .navbar_list {
+        display: none;
+    }
+
+    main{
+        display:flex;
+    }
+    h1 {
+        writing-mode: vertical-rl; /* Rotate text sideways */
+        transform: rotate(180deg); /* Adjust text direction */
+        margin-left:0.5em;
+        font-size:100px;
+    }
+
+    .content:nth-child(even) {
+        margin-left: 0; /* Remove left margin */
+        width: 400px;
+        height:auto;
+    }
+    
+    .content{
+        width:400px;
+        height:auto;
+    }
+    .content img{
+        width:300px;
+    }
+    ..content video{
+        width: 300px;
+        
+        padding-bottom:2em;
+    }
+    .hobbies-container {
+        position: relative; /* Ensure the container is positioned relative */
+        display: flex;      /* Use flexbox for alignment */
+        gap:5em;
+        justify-content: flex-start; 
+        align-items: flex-start; 
+        margin-top:5em;
+        margin-left:2em;
+    }
+    
+    .hobbies-container::before {
+        display:none;
+    }
+    
+    .dot {
+        display:none;
+    }
+    .content p{
+        font-size:27px;
+    }
+    h2{
+        font-size:35px;
+        text-align:left;
+    }
+    audio{
+        margin:15px 0;
+    }
+    
+
+
+
+}
+
+/* Tablet Landscape */
+@media (min-width: 769px) and (max-width: 1024px) and (orientation: landscape) {
+    nav{
+        background-color:transparent;
+    }
+    .navbar_list{
+        flex-direction:column;
+        gap:1.2em;
+        margin-top:20em;
+        margin-left:30em;
+        font-size:20px;
+       
+    }
+    main{
+        margin-top:20em;
+    }
+    .hobbies-container{
+        width:100%;
+    }
+    .content{
+        width:450px;
+        margin-left:2em;
+    }
+    .content img{
+        width:350px;
+    }
+    content:nth-child(even) {
+        padding-left:0; 
+        width: 450px;
+        
+    }
+    .content video{
+        width:350px;
+    }
+    .content:nth-child(odd) .dot {
+        margin-left: 16em;
+    }
+    
+    .content:nth-child(even) .dot {
+        margin-left: -26em;
+    }
+
+    
+    
+}

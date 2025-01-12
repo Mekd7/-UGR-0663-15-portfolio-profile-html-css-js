@@ -1,0 +1,330 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.navbar_toggle {
+    display: none; /* Hide by default */
+    cursor: pointer;
+}
+.hamburger-icon {
+    width: 30px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+nav { 
+    background-color: #B9B6E5; 
+    height: 7em;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 0 20px; /* Add some horizontal padding */
+}
+.circular_background{
+    display:none;
+}
+
+.navbar_list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    flex-grow: 1; 
+}
+
+.navbar_logo{
+    margin-left: 2em;
+}
+
+.navbar_list li {
+    margin: 0 25px; 
+    list-style: none;
+}
+
+.navbar_list li a {
+    text-decoration: none; 
+    font-size: 20px; 
+    color: black;
+    font-weight: bold; 
+    font-size: 20px;
+}
+main{
+    margin-top: 3em;
+}
+h1{
+    text-align: center;
+}
+table {
+    width: 75%; 
+    margin: 20px auto; 
+    border-collapse: collapse; 
+    background-color: rgb(35, 35, 35); 
+}
+
+th, td {
+    border: 2px solid rgb(146, 64, 146);
+    padding: 10px;
+    color: white; 
+    text-align: left;
+    font-size:25px;
+}
+p{
+    font-size:20px
+}
+.technical-skills ul li{
+    font-size:25px;
+}
+
+
+th {
+   
+    font-weight: bold; 
+    background-color: rgb(54, 54, 54); 
+}
+
+tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.2); 
+}
+.main-h2{
+    text-align: center;
+    font-size: 35px;
+    margin-top: 2em;
+}
+
+.skills {
+    display: flex;
+    justify-content: center;
+    gap: 8em;
+    margin-top: 6em;
+}
+
+.programming-skills {
+    background-color: #D0D0FE;
+    width: 500px; 
+    padding: 2em; 
+    border-radius: 8px; 
+}
+
+.programming-skills-list {
+    list-style: none; 
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    padding: 0; 
+    margin: 0; 
+}
+.skills-list {
+    list-style: none; 
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    padding-top: 3em; 
+    margin: 0;
+}
+.icon-container {
+    flex: 0 0 48%; /* Each icon takes up about 48% of the row */
+    margin-bottom: 1em; /* Space below each icon container */
+    display: flex; /* Align items within the list item */
+    flex-direction: column; /* Stack icon and text vertically */
+    align-items: center; /* Center horizontally */
+    text-align: center; /* Center text */
+}
+
+.icon-container img {
+    width: 80px; /* Set a fixed width for icons */
+    height: 80px; /* Set a fixed height for icons */
+    border-radius: 12px; /* Rounded corners on images */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Shadow effect on icons */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transitions for all effects */
+}
+
+.icon-container img:hover {
+    transform: scale(1.1); /* Scale up on hover */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
+}
+
+.icon-container p {
+    color: #000000; /* White text color for labels */
+    margin-top: 1em; /* Space between icon and text */
+}
+
+
+
+.technical-skills {
+    background-color: #D0D0FE;
+    width: 500px; 
+    padding: 2em; 
+}
+.technical-skills ul{
+    padding-top: 3em;
+    font-size: 18px;
+}
+
+footer{
+    margin-top: 4em;
+    background-color: #B9B6E5;
+    height: 7em;
+}
+footer p{
+    text-align: center;
+    padding-top: 1em;
+   
+}
+.social-icons{
+    display: flex;
+    justify-content: center;
+    gap:8em;
+    padding-top: 1em;
+}
+
+/* Phone Portrait */
+@media only screen and (max-width: 480px) and (orientation: portrait) {
+    nav {
+        display: flex;
+        justify-content: center;
+        gap: 5em;
+        width: 100%;
+        height: auto;
+    }
+
+    .navbar_logo img {
+        width: 150px;
+        height: auto;
+    }
+    .navbar_toggle{
+        display: flex;
+    }
+    .hamburger-icon {
+        width: 100px; /* Adjust size as needed */
+        height: auto; /* Maintain aspect ratio */
+    }
+    .navbar_list {
+        display: none;
+    }
+    .skills {
+        width: 100%;
+        gap: 0; /* Adjust gap */
+    }
+    .programming-skills, .technical-skills {
+        width: 90%; /* Full width */
+    }
+    table{
+        width: 100%;
+    }
+    .technical-skills ul li{
+        font-size:25px
+    }
+}
+
+/* Phone Landscape */
+@media only screen and (max-width: 480px) and (orientation: landscape) {
+    
+}
+
+/* Tablet Portrait */
+@media only screen and (min-width: 481px) and (max-width: 768px) and (orientation: portrait) {
+    nav {
+        display: flex;
+        justify-content: center;
+        gap: 25em;
+        width: 100%;
+        height: auto;
+    }
+
+    .navbar_logo img {
+        width: 150px;
+        height: auto;
+    }
+    .navbar_toggle{
+        display: flex;
+    }
+    .hamburger-icon {
+        width: 100px; /* Adjust size as needed */
+        height: auto; /* Maintain aspect ratio */
+    }
+    .navbar_list {
+        display: none;
+    }
+    .skills{
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        margin-left:5em;
+    }
+    h2{
+        font-size:35px;
+    }
+    .technical-skills ul li{
+        font-size:30px;
+    }
+    p{
+        font-size:30px
+    }
+    th, td {
+        font-size:25px;
+    }
+    .programming-skills{
+        width:600px;
+    }
+    .technical-skills{
+        width:600px;
+    }
+   
+}
+
+/* Tablet Landscape */
+@media (min-width: 769px) and (max-width: 1024px) and (orientation: landscape) {
+    nav{
+        background-color:transparent;
+        
+    }
+    .navbar_list{
+        flex-direction:column;
+        gap:1.2em;
+        margin-top:16em;
+        margin-left:30em;
+        font-size:20px;
+       
+    }
+    main{
+        margin-top:15em;
+    }
+    
+    .circular_background {
+        position: absolute; /* Position absolutely within the written_content */
+        top: -70%; /* Adjust as needed */
+        left: -50%; /* Align to the left of the written_content */
+        width: 145%; /* Ensure the circle covers enough area */
+        height: 145%; /* Ensure the circle covers enough area */
+        border-radius: 50%; /* Create a circle */
+        background-color: rgba(185, 182, 229, 0.6); /* Semi-transparent gray */
+        z-index: -1; /* Position behind other content */
+        transform: rotate(450deg); /* Rotate the quarter-circle */
+        background-color:rgb(191, 191, 255);
+    }
+    
+    .skills{
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+    }
+    h2{
+        font-size:35px;
+    }
+    .technical-skills ul li{
+        font-size:30px;
+    }
+    p{
+        font-size:30px
+    }
+    th, td {
+        font-size:25px;
+    }
+    .programming-skills{
+        width:600px;
+    }
+    .technical-skills{
+        width:600px;
+    }
+}

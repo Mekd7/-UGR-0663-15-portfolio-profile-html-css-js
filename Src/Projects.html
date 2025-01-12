@@ -4,19 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Portfolio</title>
+  <link rel="stylesheet" href="/Src/styles/project style.css">
+  <script src="/Src/menu.js" defer></script>
 </head>
-<body>
 
+<body>
   <nav>
+    <div class="navbar_logo">
+        <img src="Images/main_logo.png" alt="Main logo" width="170" height="150">
+    </div>
+    <div class="navbar_toggle" id="navbar-toggle">
+      <img src="/Src/Images/hamburger menu.webp" alt="Menu" class="hamburger-icon"> 
+  </div>
     <ul class="navbar_list">
-    <li><div class="navbar_logo">
-        <img src="Images/main_logo.png" alt="Main logo" width="140" height="120">
-    </div></li>
-    <li><a href="Home.html">Home</a></li>
-    <li><a href="CV.html">CV</a></li>
-    <li><a href="Projects.html">Project</a></li>
-    <li><a href="Hobby.html">Hobby</a></li>
-    <li><a href="Books.html">Books</a></li>
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="CV.html">CV</a></li>
+        <li><a href="Projects.html">Project</a></li>
+        <li><a href="Hobby.html">Hobby</a></li>
+        <li><a href="Books.html">Books</a></li>
     </ul>
 </nav>
 
@@ -29,7 +34,9 @@
 
     <div class="project-section-container">
       <section>
-        <img src="Images/expense_tracker.png" alt="Expense_Tracker_React_Project_live_demo">
+        <div class="image-crop-container">
+          <img src="Images/expense_tracker.png" alt="Expense_Tracker_React_Project_live_demo">
+        </div>
         <h2>Expense Tracker</h2>
         <p>The Expense Tracker is a web application that allows users to add transactions by inputting an item and its price. Once added, each transaction appears in the transactions list along with its respective price. The app automatically calculates and displays the total income, total expenses, and the current balance.</p>
         <a href="https://github.com/Mekd7/Expense_Tracker_React_Project">
